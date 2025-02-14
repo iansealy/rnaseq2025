@@ -1,0 +1,26 @@
+main#rnaseq table {
+    margin: 1em 0;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #0D3539; /* Same as dark circle in SVG */
+}
+
+main#rnaseq th {
+    font-weight: bold;
+    background-color: #6dbac1; /* Lighter than all coloured circles in SVG */
+    font-family: 'Ubuntu Condensed', Roboto, sans-serif;
+    text-align: left;
+}
+
+main#rnaseq th, main#rnaseq td {
+    padding: 10px;
+    border: 1px solid #0D3539; /* Same as dark circle in SVG */
+}
+
+main#rnaseq tr:nth-child(even) {
+    background-color: #F3F3F3; /* Light grey */
+}
+
+main#rnaseq td {
+    vertical-align: top;
+}

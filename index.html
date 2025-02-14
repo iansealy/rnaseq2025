@@ -1,0 +1,216 @@
+<!doctype html>
+<html class="no-js" lang="en-gb">
+
+<head>
+  <meta charset="utf-8">
+  <title>Next steps in gene prioritisation | Introduction to RNA-seq and functional interpretation 2025 | Busch Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.buschlab.org/css/normalize.css">
+  <link rel="stylesheet" href="https://www.buschlab.org/css/main.css?20220914">
+  <link rel="stylesheet" href="https://rnaseq2025.buschlab.org/extra.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700%7CUbuntu+Condensed" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.buschlab.org/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.buschlab.org/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.buschlab.org/favicon-16x16.png">
+  <link rel="manifest" href="https://www.buschlab.org/site.webmanifest">
+  <link rel="mask-icon" href="https://www.buschlab.org/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+  <div id="container">
+    <header>
+      <a href="https://www.buschlab.org/"><img src="https://www.buschlab.org/img/logo.svg" alt="Busch Lab" /></a>
+      <nav>
+        <ul>
+          <li>
+            <a href="https://www.buschlab.org/">Home</a>
+          </li>
+
+
+
+          <li>
+            <a href="https://www.buschlab.org/contact/">Contact</a>
+          </li>
+
+
+
+          <li>
+            <a href="https://www.buschlab.org/news/">News</a>
+          </li>
+
+
+
+          <li>
+            <a href="https://www.buschlab.org/publications/">Publications</a>
+          </li>
+
+
+
+          <li>
+            <a href="https://www.buschlab.org/research/">Research</a>
+          </li>
+
+
+
+          <li>
+            <a href="https://www.buschlab.org/resources/">Resources</a>
+          </li>
+
+
+
+          <li>
+            <a href="https://www.buschlab.org/software/">Software</a>
+          </li>
+
+
+
+          <li>
+            <a href="https://www.buschlab.org/team/">Team</a>
+          </li>
+
+
+
+          <li>
+            <a href="https://zmp.buschlab.org/">ZMP</a>
+          </li>
+
+
+        </ul>
+      </nav>
+    </header>
+    <main id="rnaseq">
+      <h1>Introduction to RNA-seq and functional interpretation 2025</h1>
+
+<h2>Next steps in gene prioritisation</h2>
+
+<p>This page has links to materials and example data used during the &quot;Next steps in gene prioritisation&quot; session of the <a href="https://www.ebi.ac.uk/training/events/introduction-rna-seq-and-functional-interpretation-2/">Introduction to RNA-seq and functional interpretation</a> course run in 2025 at the European Bioinformatics Institute.</p>
+
+<h3>Slides</h3>
+
+<ul>
+<li><a href="next-steps-in-gene-prioritisation.pdf">next-steps-in-gene-prioritisation.pdf</a></li>
+</ul>
+
+<h3>Exercises</h3>
+
+<ul>
+<li><a href="next-steps-in-gene-prioritisation-exercises.pdf">next-steps-in-gene-prioritisation-exercises.pdf</a></li>
+</ul>
+
+<h3>Data</h3>
+
+<p>Before starting the exercises, copy all of the data from &quot;penelopeCloud&quot; to your home directory or download the data from this page.</p>
+
+<h4>Experiment:</h4>
+
+<p>Zebrafish were exposed to amphetamine, nicotine or oxycodone from 24 hours post fertilisation to 5 days post fertilisation and behavioural assays were performed on the larvae. At 5 dpf, 6 samples, each consisting of pools of 6-7 embryos, were collected for each condition (plus unexposed controls). In total, 24 samples were collected, although two later failed QC and were excluded from the analysis.</p>
+
+<p>RNA was extracted and sequencing libraries were made using Illumina’s TruSeq Stranded mRNA kit. They were sequenced on one lane of NovaSeq SP PE50, resulting in 16-24 million reads per sample. The reads were aligned to the GRCz11 reference genome with STAR and differentially expressed genes were determined with DESeq2.</p>
+
+<p>Each of the 22 samples has a name like &quot;Cnt_3&quot;, where &quot;Cnt&quot; indicates a control sample (the others being &quot;Amp&quot;, &quot;Nic&quot; and &quot;Oxy&quot;) and 3 is a number 
+indicating the replicate.</p>
+
+<h4>Downloads:</h4>
+
+<table>
+  <tr>
+    <th rowspan="2">Treatment</th>
+    <th rowspan="2">Differentially Expressed Genes</th>
+    <th colspan="3">Metadata</th>
+  </tr>
+  <tr>
+    <th>All Metadata (including counts)</th>
+    <th>Just Gene Annotation</th>
+    <th>Just Ensembl Stable ID</th>
+  </tr>
+  <tr>
+    <th rowspan="2">Amphetamine</th>
+    <th>All (irrespective of adjusted -p-value)</th>
+    <td><a href="data/Amp.counts.all.tsv">Amp.counts.all.tsv</a></td>
+    <td><a href="data/Amp.annotation.all.tsv">Amp.annotation.all.tsv</a></td>
+    <td><a href="data/Amp.id.all.tsv">Amp.id.all.tsv</a></td>
+  </tr>
+  <tr>
+    <th>Significant (adjusted p-value <= 0.05)</th>
+    <td><a href="data/Amp.counts.sig.tsv">Amp.counts.sig.tsv</a></td>
+    <td><a href="data/Amp.annotation.sig.tsv">Amp.annotation.sig.tsv</a></td>
+    <td><a href="data/Amp.id.sig.tsv">Amp.id.sig.tsv</a></td>
+  </tr>
+  <tr>
+    <th rowspan="2">Nicotine</th>
+    <th>All (irrespective of adjusted -p-value)</th>
+    <td><a href="data/Nic.counts.all.tsv">Nic.counts.all.tsv</a></td>
+    <td><a href="data/Nic.annotation.all.tsv">Nic.annotation.all.tsv</a></td>
+    <td><a href="data/Nic.id.all.tsv">Nic.id.all.tsv</a></td>
+  </tr>
+  <tr>
+    <th>Significant (adjusted p-value <= 0.05)</th>
+    <td><a href="data/Nic.counts.sig.tsv">Nic.counts.sig.tsv</a></td>
+    <td><a href="data/Nic.annotation.sig.tsv">Nic.annotation.sig.tsv</a></td>
+    <td><a href="data/Nic.id.sig.tsv">Nic.id.sig.tsv</a></td>
+  </tr>
+  <tr>
+    <th rowspan="2">Oxycodone</th>
+    <th>All (irrespective of adjusted -p-value)</th>
+    <td><a href="data/Oxy.counts.all.tsv">Oxy.counts.all.tsv</a></td>
+    <td><a href="data/Oxy.annotation.all.tsv">Oxy.annotation.all.tsv</a></td>
+    <td><a href="data/Oxy.id.all.tsv">Oxy.id.all.tsv</a></td>
+  </tr>
+  <tr>
+    <th>Significant (adjusted p-value <= 0.05)</th>
+    <td><a href="data/Oxy.counts.sig.tsv">Oxy.counts.sig.tsv</a></td>
+    <td><a href="data/Oxy.annotation.sig.tsv">Oxy.annotation.sig.tsv</a></td>
+    <td><a href="data/Oxy.id.sig.tsv">Oxy.id.sig.tsv</a></td>
+  </tr>
+</table>
+
+<h4>Headings:</h4>
+
+<p>The column headings are:</p>
+
+<table>
+<tr><th>1</th><th>Gene</th><td>Ensembl ID</td><tr>
+<tr><th>2</th><th>pval</th><td>p-value</td><tr>
+<tr><th>3</th><th>adjp</th><td>Adjusted p-value</td><tr>
+<tr><th>4</th><th>log2fc</th><td>Log2 fold change</td><tr>
+<tr><th>5</th><th>Chr</th><td>Chromosome (or scaffold) name</td><tr>
+<tr><th>6</th><th>Start</th><td>Gene start (in bp)</td><tr>
+<tr><th>7</th><th>End</th><td>Gene end (in bp)</td><tr>
+<tr><th>8</th><th>Strand</th><td>Gene strand (1 or -1)</td><tr>
+<tr><th>9</th><th>Biotype</th><td>Gene biotype (e.g. protein coding or lincRNA)</td><tr>
+<tr><th>10</th><th>Name</th><td>Gene name</td><tr>
+<tr><th>11</th><th>Description</th><td>Gene description</td><tr>
+<tr><th>12</th><th>Cnt_1 count</th><td>Counts for 1st control replicate</td><tr>
+<tr><th>13</th><th>Cnt_2 count</th><td>Counts for 2nd control replicate</td><tr>
+<tr><th>...</th><th>...</th><td>...</td><tr>
+<tr><th>23</th><th>Cnt_1 normalised count</th><td>Normalised counts for 1st control replicate</td><tr>
+<tr><th>24</th><th>Cnt_2 normalised count</th><td>Normalised counts for 2nd control replicate</td><tr>
+<tr><th>...</th><th>...</th><td>...</td><tr>
+</table>
+
+<p>The &quot;counts&quot; files contain all of the above headings. The &quot;annotation&quot; files just contain the first 11 columns. The &quot;id&quot; files just contain the first column.</p>
+
+    </main>
+  </div>
+
+  <footer>
+    <ul>
+      <li>
+        <a href="https://twitter.com/busch_lab?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-screen-name="false" data-lang="en" data-show-count="false">Follow @busch_lab</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </li>
+    </ul>
+    <ul>
+      <li>&copy; Busch Lab 2025</li>
+    </ul>
+  </footer>
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-142839217-3', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
